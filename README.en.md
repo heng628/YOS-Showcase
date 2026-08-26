@@ -37,6 +37,8 @@ E-commerce operators, content creators, freelancers, learners... everyone has th
 | 🤖 **AI Analysis / Command Center** | Ctrl+K opens the command center; natural-language intent routing to read-only analysis (evidence-based, never fabricated) |
 | 🔔 **Monitoring** | Rule (metric + scope + condition + sensitivity) → proposal confirm → deterministic evaluation → event trigger → user resolve; Mute/Pause/Delete semantics strictly separated |
 | 📄 **Reports** | One-tap temporary report (Markdown preview + export) as the output layer |
+| 🔌 **Data Ingestion** (planned) | Common file import (PDF / PPT / Word, near-term); platform ingestion: **Bilibili creator center / Douyin / Taobao / Xiaohongshu / Xianyu** (first 5 platforms in S2, user authorizes their own accounts); **generic API/endpoint window** (plug in credentials & parameters for any callable API); scheduled sync & file watching |
+| 🦾 **Dual-plane Agent architecture** (decided) | ① **Deterministic execution plane**: ingestion/parsing/metric derivation/scheduling by program engines (user-managed, no memory); ② **Intelligence plane**: AI understanding/explanation/recommendation/attribution with growable memory & profile (user-visible, editable, erasable) — LLM never computes nor writes SQL |
 | 🛡️ **Trust by Design** | All writes go through `Proposal → Confirmation → Execute → Result → Activity Log`; **deleting raw data is never automated**; data stays local and migratable |
 
 ---
@@ -150,8 +152,8 @@ YOS_LLM_MOCK=1 pnpm dev   # deterministic Mock LLM (full chain, no API key neede
 
 ## Roadmap
 
-1. **S1 Validate** (current): single-machine MVP with seed users — real-data closed loop
-2. **S2 Capability surface**: cloud sync/backup/metering, more data sources (API/OAuth), formal report center, **Agent memory & learning** (deterministic, evidence-driven personal profile — user-visible and erasable), agent write capability (propose → confirm → execute)
+1. **S1 Validate** (current): single-machine MVP with seed users; **extend file import: PDF / PPT / Word** (near-term)
+2. **S2 Capability surface**: **Data Source Center** — first platforms (Bilibili creator center / Douyin / Taobao / Xiaohongshu / Xianyu) + **generic API/endpoint window** (user supplies credentials & parameters to create callable sources) + scheduled sync; cloud sync/backup/metering; formal report center; **Agent memory & learning** (evidence-driven deterministic memory + user profile, user-visible and erasable); agent write capability (propose → confirm → execute)
 3. **S3 Expand**: small-team collaboration; establish the "personal data asset" mindset
 
 ---
